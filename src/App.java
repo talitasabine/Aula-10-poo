@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -21,20 +22,21 @@ public class App {
 
         // composição
 
-        Comodo quarto = new Comodo("Quarto", 9);
-        Comodo cozinha = new Comodo("Cozinha", 6);
 
         List<Comodo> comodos = new ArrayList<>();
-        comodo.add(quarto);
-        comodos.add(cozinha);
+        comodos.add(new Comodo("Quarto", 9));
+        comodos.add(new Comodo("Cozinha", 6));
     
         Casa casa = new Casa(comodos);
 
-
+        casa.listarComodo();
 
       //  casa.adicionarComodo(quarto);
        // casa.adicionarComodo(cozinha);
 
-        casa.exibirComodo();
+        //casa.exibirComodo();
+
+        Casa casa2 = new Casa(new ArrayList<>());
+
 }
 }
